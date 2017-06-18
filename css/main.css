@@ -61,3 +61,9 @@ footer{
 
 /* Estilos comentarios */
 
+.parrafCaja{
+  background-color: pink;
+  border-radius: 5px; 
+  padding-left: 15px;
+  margin-bottom: 5px;
+}

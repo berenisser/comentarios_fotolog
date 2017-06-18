@@ -9,16 +9,20 @@ function init(){
 function guardar(){
 	var clave = document.getElementById("clave").value;
 	var valor = document.getElementById("valor").value;
+	
+	localStorage.setItem(clave, valor);
 
-	sessionStorage.setItem(clave, valor);
+	document.getElementById("clave").value= ""; //limpia los campos
+	document.getElementById("valor").value = ""; //limpia los campos
 
 	var contenedor = document.getElementById("ale");
 	contenedor.innerHTML = "";
-	for(var i = 0; i < sessionStorage.length; i++){
-		var kei = sessionStorage.key(i);
-		var valuee = sessionStorage.getItem(kei);
+	for(var i = 0; i < localStorage.length; i++){
+		var kei = localStorage.key(i);
+		var valuee = localStorage.getItem(kei);
 
 		var comentarCaja = document.createElement("div");
+		comentarCaja.classList.add("parrafCaja");
 		contenedor.appendChild(comentarCaja);
 		var titulo = document.createElement("h3");
 		var tituloText = document.createTextNode(kei);
@@ -38,3 +42,7 @@ function guardar(){
 
 init();
 
+document.getElementById("btn-limpiar").addEventListener("click",function(){
+	window.localStorage.clear();
+	guardar();
+});
