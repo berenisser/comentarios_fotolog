@@ -1,6 +1,10 @@
 body {
   background-color: white;
   color:black;
+  background: #A1FFCE;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 header {
@@ -30,7 +34,7 @@ h1{
 
 textarea, input{
   width: 100%;
-  border-radius: 0px;
+  border-radius: 5px;
   border: 1px solid DeepPink;
   margin-bottom: 20px;
 }
@@ -66,4 +70,26 @@ footer{
   border-radius: 5px; 
   padding-left: 15px;
   margin-bottom: 5px;
+}
+
+.h-3{
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.mb-15{
+  padding-bottom: 15px;
+}
+
+.btn-primary{
+  background-color: DeepPink;
+  color: #fff;
+  border: 1px solid DeepPink;
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: #fff;
+  color: DeepPink;
+  border: 1px solid DeepPink;
 }

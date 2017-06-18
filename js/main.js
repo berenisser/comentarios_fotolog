@@ -23,16 +23,19 @@ function guardar(){
 
 		var comentarCaja = document.createElement("div");
 		comentarCaja.classList.add("parrafCaja");
-		contenedor.appendChild(comentarCaja);
+		//contenedor.appendChild(comentarCaja);
 		var titulo = document.createElement("h3");
+		titulo.classList.add("h-3");
 		var tituloText = document.createTextNode(kei);
 		titulo.appendChild(tituloText);
 		comentarCaja.appendChild(titulo);
 
 		var parrafo = document.createElement("p");
+		parrafo.classList.add("mb-15");
 		var parrafoText = document.createTextNode(valuee);
 		parrafo.appendChild(parrafoText);
 		comentarCaja.appendChild(parrafo);
+		contenedor.appendChild(comentarCaja);
 
 /*
 		contenedor.innerHTML += "<p>" + kei + " " + 
